@@ -49,6 +49,7 @@ function preload ()
 {
   this.load.image('sky', 'assets/BG.png');
   this.load.image('ground', 'assets/Tiles/Tile (2).png');
+  this.load.image('dude', 'assets/player.png');
 }
 
 function create ()
@@ -62,6 +63,12 @@ function create ()
     platforms.create(600, 400, 'ground');
     platforms.create(50, 250, 'ground');
     platforms.create(750, 220, 'ground');
+  
+  player = this.physics.add.sprite(100, 450, 'dude');
+
+player.setBounce(0.2);
+player.setCollideWorldBounds(true);
+
 }
 
 function update ()
