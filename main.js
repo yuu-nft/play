@@ -45,6 +45,16 @@ var config = {
 
 var game = new Phaser.Game(config);
 
+var platforms;
+
+      var player;
+      var competitors = {};
+
+      var cursor;
+
+      var jumpHeight = -300;
+      var that;
+
 function preload ()
 {
   this.load.image('sky', 'assets/BG.png');
