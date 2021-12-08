@@ -70,6 +70,10 @@ player.setBounce(0.2);
 player.setCollideWorldBounds(true);
   
   this.physics.add.collider(player, platforms);
+  
+  cursors = this.input.keyboard.createCursorKeys();
+  
+  player.body.setGravityY(300)
 
 }
 
